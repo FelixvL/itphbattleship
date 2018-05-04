@@ -21,9 +21,18 @@ public class ProgramStart {
 			Scanner scanner = new Scanner(System.in);
 			String input = scanner.nextLine();
 			System.out.println(input);
+			int column = getcolumn(input);
+			System.out.println("the column is: "+ column);
+			System.out.println("The outcome is: " + sea[column]);
 		}
 		
 		
+		
+	}
+	static int getcolumn(String input) {
+		char theChar = input.charAt(1);
+		int trial = theChar - 48;
+		return trial;
 	}
 
 }
