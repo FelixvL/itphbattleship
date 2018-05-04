@@ -3,6 +3,7 @@ package battleship;
 import java.util.Scanner;
 
 public class ProgramStart {
+	static int attempts = 8;
 	public static void main(String args[]) {
 		String[] sea =  {"D","x","x","x","s"};
 		String[] sea1 = {"C","x","x","x","s"};
@@ -18,19 +19,24 @@ public class ProgramStart {
 		}
 		boolean toContinue = true;
 		while(toContinue) {
+			attempts--;
 			Scanner scanner = new Scanner(System.in);
 			String input = scanner.nextLine();
-			System.out.println(input);
 			int column = getcolumn(input);
 			int row = getrow(input);
-			System.out.println("the column is: "+ column);
-			System.out.println("The outcome is: " + sea[column]);
-			System.out.println("the row is: "+ row);
-			System.out.println("The total is: " + seas[row][column]);
+			System.out.println("The outcome is: " + seas[row][column]);
+			toContinue = checkIfOver();
+		}	
+		System.out.println("Thanks for playing");
+		
+	}
+	static boolean checkIfOver() {
+		System.out.println("Attempts left are "+ attempts);
+		if(attempts < 1) {
+			return false;
+		}else {
+			return true;
 		}
-		
-		
-		
 	}
 	static int getcolumn(String input) {
 		char theChar = input.charAt(1);
