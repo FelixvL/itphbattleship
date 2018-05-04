@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ProgramStart {
 	static int attempts = 8;
+	static int score = 0;
 	public static void main(String args[]) {
 		String[] sea =  {"D","x","x","x","s"};
 		String[] sea1 = {"C","x","x","x","s"};
@@ -24,6 +25,9 @@ public class ProgramStart {
 			String input = scanner.nextLine();
 			int column = getcolumn(input);
 			int row = getrow(input);
+			if(seas[row][column].equals("s")) {
+				score++;
+			}
 			System.out.println("The outcome is: " + seas[row][column]);
 			toContinue = checkIfOver();
 		}	
@@ -32,6 +36,7 @@ public class ProgramStart {
 	}
 	static boolean checkIfOver() {
 		System.out.println("Attempts left are "+ attempts);
+		System.out.println("Your score is: "+ score);
 		if(attempts < 1) {
 			return false;
 		}else {
