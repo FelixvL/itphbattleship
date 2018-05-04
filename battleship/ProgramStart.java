@@ -7,9 +7,9 @@ public class ProgramStart {
 		String[] sea =  {"D","x","x","x","s"};
 		String[] sea1 = {"C","x","x","x","s"};
 		String[] sea2 = {"B","s","s","x","s"};
-		String[] sea3 = {"A","x","x","x","x"};
+		String[] sea3 = {"A","s","x","x","x"};
 		String[] sea4 = {" ","1","2","3","4"};
-		String[][] seas = {sea, sea1, sea2, sea3, sea4};
+		String[][] seas = {sea4, sea3, sea2, sea1, sea};
 		for (int x = 0; x < seas.length; x++) {
 			for(int y = 0; y< seas[x].length; y++) {
 				System.out.print(seas[x][y]);
@@ -26,7 +26,7 @@ public class ProgramStart {
 			System.out.println("the column is: "+ column);
 			System.out.println("The outcome is: " + sea[column]);
 			System.out.println("the row is: "+ row);
-			System.out.println("The total is: " + sea[row]);
+			System.out.println("The total is: " + seas[row][column]);
 		}
 		
 		
