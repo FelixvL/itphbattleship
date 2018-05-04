@@ -22,8 +22,11 @@ public class ProgramStart {
 			String input = scanner.nextLine();
 			System.out.println(input);
 			int column = getcolumn(input);
+			int row = getrow(input);
 			System.out.println("the column is: "+ column);
 			System.out.println("The outcome is: " + sea[column]);
+			System.out.println("the row is: "+ row);
+			System.out.println("The total is: " + sea[row]);
 		}
 		
 		
@@ -32,6 +35,11 @@ public class ProgramStart {
 	static int getcolumn(String input) {
 		char theChar = input.charAt(1);
 		int trial = theChar - 48;
+		return trial;
+	}
+	static int getrow(String input) {
+		char theChar = input.charAt(0);
+		int trial = theChar - 96;
 		return trial;
 	}
 
