@@ -2,9 +2,9 @@ package battleship;
 
 public class ProgramStart {
 	public static void main(String args[]) {
-		String[] sea = {"x","x","x","x"};
-		String[] sea1 = {"x","x","x","x"};
-		String[] sea2 = {"x","x","x","x"};
+		String[] sea =  {"x","x","x","s"};
+		String[] sea1 = {"x","x","x","s"};
+		String[] sea2 = {"x","x","x","s"};
 		String[] sea3 = {"x","x","x","x"};
 		String[][] seas = {sea, sea1, sea2, sea3};
 		for (int x = 0; x < seas.length; x++) {
